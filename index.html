@@ -9,22 +9,35 @@
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background-color: #013220;
-      color: #d8f3dc;
+      background-color: #ffffff;
+      color: #222;
     }
 
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 60px 20px;
-    }
-
-    .profile {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    .header {
+      background-image: url("travel.jpg"); /* Replace with your image file */
+      background-size: cover;
+      background-position: center;
+      padding: 80px 20px;
+      color: white;
       text-align: center;
+      position: relative;
+    }
+
+    .header::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* dark overlay for readability */
+      z-index: 0;
+    }
+
+    .profile-content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .profile-img {
@@ -32,35 +45,33 @@
       height: 120px;
       border-radius: 50%;
       object-fit: cover;
-      border: 3px solid #a3c9a8;
+      border: 3px solid white;
       margin-bottom: 15px;
     }
 
     h1 {
       margin: 0;
-      font-size: 26px;
+      font-size: 28px;
       font-weight: 600;
     }
 
     .subtitle {
       font-size: 18px;
-      color: #a3c9a8;
+      color: #e0f7fa;
       margin-top: 5px;
     }
 
-    .section {
+    .main {
       max-width: 900px;
-      width: 100%;
-      margin-top: 40px;
-      padding: 20px;
-      background-color: #014d33;
-      border-radius: 10px;
+      margin: auto;
+      padding: 40px 20px;
+      background-color: white;
     }
 
     h2 {
-      color: #b7e4c7;
-      border-bottom: 1px solid #2a9d8f;
-      padding-bottom: 10px;
+      color: #222;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 5px;
     }
 
     ul {
@@ -68,7 +79,7 @@
     }
 
     a {
-      color: #74c69d;
+      color: #0066cc;
       text-decoration: none;
     }
 
@@ -91,14 +102,6 @@
       background-color: #1b7767;
     }
 
-    .education, .interests {
-      margin-top: 20px;
-    }
-
-    .edu-item {
-      margin-bottom: 10px;
-    }
-
     .socials {
       margin-top: 15px;
       font-size: 20px;
@@ -106,14 +109,14 @@
 
     .socials a {
       margin: 0 8px;
-      color: #a3c9a8;
+      color: white;
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <div class="profile">
+  <div class="header">
+    <div class="profile-content">
       <img src="your-profile.jpg" alt="Profile" class="profile-img">
       <h1>Pham Khanh Quan</h1>
       <div class="subtitle">Ph.D. Student in Information & Communication Engineering</div>
@@ -124,43 +127,35 @@
         <a href="Quan_CV.pdf" class="cv-button" target="_blank">Download CV</a>
       </div>
     </div>
+  </div>
 
-    <div class="section">
-      <h2>About Me</h2>
-      <p>
-        I am a Ph.D. student working on federated learning, edge computing, and deep learning systems.
-        My research focuses on optimizing the deployment and performance of large models in resource-constrained and distributed environments.
-      </p>
-    </div>
+  <div class="main">
+    <h2>About Me</h2>
+    <p>
+      I am a Ph.D. student working on federated learning, edge computing, and deep learning systems.
+      My research focuses on optimizing the deployment and performance of large models in resource-constrained and distributed environments.
+    </p>
 
-    <div class="section">
-      <h2>Research Interests</h2>
-      <div class="interests">
-        <ul>
-          <li>Federated Learning & Edge Intelligence</li>
-          <li>Large Language Models (LLMs)</li>
-          <li>Reinforcement Learning</li>
-          <li>Computer Vision & NLP</li>
-        </ul>
-      </div>
-    </div>
+    <h2>Research Interests</h2>
+    <ul>
+      <li>Federated Learning & Edge Intelligence</li>
+      <li>Large Language Models (LLMs)</li>
+      <li>Reinforcement Learning</li>
+      <li>Computer Vision & NLP</li>
+    </ul>
 
-    <div class="section">
-      <h2>Publications</h2>
-      <ul>
-        <li>Elastic federated learning with Kubernetes VPA – Future Generation Computer Systems (2024)</li>
-        <li>Federated Learning in Edge Environments – IEEE Access (2023)</li>
-        <li>Low-Cost Mind-Voice-Gesture Robotic Arm – J. Electr. Eng. Technol. (2022)</li>
-      </ul>
-    </div>
+    <h2>Publications</h2>
+    <ul>
+      <li>Elastic federated learning with Kubernetes VPA – Future Generation Computer Systems (2024)</li>
+      <li>Federated Learning in Edge Environments – IEEE Access (2023)</li>
+      <li>Low-Cost Mind-Voice-Gesture Robotic Arm – J. Electr. Eng. Technol. (2022)</li>
+    </ul>
 
-    <div class="section">
-      <h2>Education</h2>
-      <div class="education">
-        <div class="edu-item">Ph.D. in Information & Communication Engineering – Chungbuk National University</div>
-        <div class="edu-item">B.Eng. in Electronics & Telecommunications – University of Engineering and Technology, VNU Hanoi</div>
-      </div>
-    </div>
+    <h2>Education</h2>
+    <ul>
+      <li>Ph.D. in Information & Communication Engineering – Chungbuk National University</li>
+      <li>B.Eng. in Electronics & Telecommunications – VNU University of Engineering and Technology, Hanoi</li>
+    </ul>
   </div>
 
 </body>
