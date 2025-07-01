@@ -2,71 +2,165 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pham Khanh Quan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #013220;
+      color: #d8f3dc;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 60px 20px;
+    }
+
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #a3c9a8;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 26px;
+      font-weight: 600;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      color: #a3c9a8;
+      margin-top: 5px;
+    }
+
+    .section {
       max-width: 900px;
-      margin: auto;
-      padding: 30px;
-      line-height: 1.6;
-      background-color: #f9f9f9;
+      width: 100%;
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #014d33;
+      border-radius: 10px;
     }
-    h1, h2 {
-      color: #333;
+
+    h2 {
+      color: #b7e4c7;
+      border-bottom: 1px solid #2a9d8f;
+      padding-bottom: 10px;
     }
+
+    ul {
+      padding-left: 20px;
+    }
+
     a {
-      color: #0066cc;
+      color: #74c69d;
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
     }
-    .section {
-      margin-bottom: 30px;
+
+    .cv-button {
+      display: inline-block;
+      background-color: #2a9d8f;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 15px;
+    }
+
+    .cv-button:hover {
+      background-color: #1b7767;
+    }
+
+    .education, .interests {
+      margin-top: 20px;
+    }
+
+    .edu-item {
+      margin-bottom: 10px;
+    }
+
+    .socials {
+      margin-top: 15px;
+      font-size: 20px;
+    }
+
+    .socials a {
+      margin: 0 8px;
+      color: #a3c9a8;
     }
   </style>
 </head>
 <body>
 
-  <h1>Pham Khanh Quan</h1>
-  <p>Ph.D. Student in Information & Communication Engineering<br>
-  Chungbuk National University, Korea</p>
+  <div class="container">
+    <div class="profile">
+      <img src="your-profile.jpg" alt="Profile" class="profile-img">
+      <h1>Pham Khanh Quan</h1>
+      <div class="subtitle">Ph.D. Student in Information & Communication Engineering</div>
+      <div class="subtitle">Chungbuk National University, Korea</div>
+      <div class="socials">
+        <a href="mailto:phamkhanhquan1997@gmail.com">📧</a>
+        <a href="https://github.com/phamkhanhquan197" target="_blank">🐙</a>
+        <a href="Quan_CV.pdf" class="cv-button" target="_blank">Download CV</a>
+      </div>
+    </div>
 
-  <div class="section">
-    <h2>About Me</h2>
-    <p>
-      I am a Ph.D. student working on federated learning, edge computing, and deep learning systems. My research focuses on optimizing the deployment and performance of large models in resource-constrained and distributed environments.
-    </p>
-  </div>
+    <div class="section">
+      <h2>About Me</h2>
+      <p>
+        I am a Ph.D. student working on federated learning, edge computing, and deep learning systems.
+        My research focuses on optimizing the deployment and performance of large models in resource-constrained and distributed environments.
+      </p>
+    </div>
 
-  <div class="section">
-    <h2>Research Interests</h2>
-    <ul>
-      <li>Federated Learning & Edge Intelligence</li>
-      <li>Large Language Models (LLMs)</li>
-      <li>Reinforcement Learning</li>
-      <li>Computer Vision & NLP</li>
-    </ul>
-  </div>
+    <div class="section">
+      <h2>Research Interests</h2>
+      <div class="interests">
+        <ul>
+          <li>Federated Learning & Edge Intelligence</li>
+          <li>Large Language Models (LLMs)</li>
+          <li>Reinforcement Learning</li>
+          <li>Computer Vision & NLP</li>
+        </ul>
+      </div>
+    </div>
 
-  <div class="section">
-    <h2>Publications</h2>
-    <ul>
-      <li>Elastic federated learning with Kubernetes VPA – Future Generation Computer Systems (2024)</li>
-      <li>Federated Learning in Edge Environments – IEEE Access (2023)</li>
-      <li>Low-Cost Mind-Voice-Gesture Robotic Arm – J. Electr. Eng. Technol. (2022)</li>
-    </ul>
-  </div>
+    <div class="section">
+      <h2>Publications</h2>
+      <ul>
+        <li>Elastic federated learning with Kubernetes VPA – Future Generation Computer Systems (2024)</li>
+        <li>Federated Learning in Edge Environments – IEEE Access (2023)</li>
+        <li>Low-Cost Mind-Voice-Gesture Robotic Arm – J. Electr. Eng. Technol. (2022)</li>
+      </ul>
+    </div>
 
-  <div class="section">
-    <h2>Contact</h2>
-    <p>
-      📧 Email: <a href="mailto:phamkhanhquan1997@gmail.com">phamkhanhquan1997@gmail.com</a><br>
-      📄 <a href="Quan_CV.pdf" target="_blank">Download my CV</a><br>
-      🌐 GitHub: <a href="https://github.com/phamkhanhquan197" target="_blank">github.com/phamkhanhquan197</a>
-    </p>
+    <div class="section">
+      <h2>Education</h2>
+      <div class="education">
+        <div class="edu-item">Ph.D. in Information & Communication Engineering – Chungbuk National University</div>
+        <div class="edu-item">B.Eng. in Electronics & Telecommunications – University of Engineering and Technology, VNU Hanoi</div>
+      </div>
+    </div>
   </div>
 
 </body>
