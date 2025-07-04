@@ -116,9 +116,56 @@
       margin: 0 8px;
       color: white;
     }
+
+    /* Dark mode styles */
+    body.dark-mode {
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+
+    body.dark-mode .main {
+      background-color: #1e1e1e;
+    }
+
+    body.dark-mode a {
+      color: #90caf9;
+    }
+
+    body.dark-mode h2 {
+      color: #ffffff;
+      border-color: #444;
+    }
+
+    body.dark-mode .cv-button {
+      background-color: #444;
+      color: #fff;
+    }
+
+    body.dark-mode .cv-button:hover {
+      background-color: #666;
+    }
+
+    /* Toggle button */
+    #theme-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: none;
+      font-size: 22px;
+      color: white;
+      cursor: pointer;
+      z-index: 2;
+    }
+    
   </style>
 </head>
 <body>
+  
+  <!-- Dark/Light mode toggle button -->
+  <button id="theme-toggle" title="Toggle Light/Dark Mode">
+    <i class="fas fa-moon"></i>
+  </button>
 
   <div class="header">
     <div class="profile-content">
@@ -387,9 +434,21 @@
     </div>
 
     
-
-
   </div>
+  <!-- Theme toggle script -->
+  <script>
+    const toggleButton = document.getElementById("theme-toggle");
+    const icon = toggleButton.querySelector("i");
 
+    toggleButton.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+
+      if (document.body.classList.contains("dark-mode")) {
+        icon.classList.replace("fa-moon", "fa-sun");
+      } else {
+        icon.classList.replace("fa-sun", "fa-moon");
+      }
+    });
+  </script>
 </body>
 </html>
